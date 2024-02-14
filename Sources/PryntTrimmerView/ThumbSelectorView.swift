@@ -50,8 +50,8 @@ public class ThumbSelectorView: AVAssetTimeSelector {
         dimmingView.isUserInteractionEnabled = false
         dimmingView.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         addSubview(dimmingView)
-        dimmingView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        dimmingView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        dimmingView.leftAnchor.constraint(equalTo: leftAnchor, constant: -30).isActive = true
+        dimmingView.rightAnchor.constraint(equalTo: rightAnchor, constant: 30).isActive = true
         dimmingView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         dimmingView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
