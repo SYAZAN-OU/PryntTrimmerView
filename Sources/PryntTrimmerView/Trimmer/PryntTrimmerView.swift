@@ -89,7 +89,7 @@ public protocol TrimmerViewDelegate: AnyObject {
     override func setupSubviews() {
         super.setupSubviews()
         layer.cornerRadius = 2
-        layer.masksToBounds = true
+        layer.masksToBounds = false
         backgroundColor = UIColor.clear
         layer.zPosition = 1
         setupTrimmerView()
