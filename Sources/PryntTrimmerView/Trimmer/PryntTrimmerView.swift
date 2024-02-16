@@ -289,8 +289,9 @@ public protocol TrimmerViewDelegate: AnyObject {
         super.assetDidChange(newAsset: newAsset)
         resetHandleViewPosition()
         
+        guard let newAsset = newAsset else { return }
         leftTimeLabel.text = "0 s"
-        rightTimeLabel.text = "\(Int(maxDuration)) s"
+        rightTimeLabel.text = "\(min(Int(maxDuration), Int(CMTimeGetSeconds(newAsset.duration)))) s"
     }
 
     private func resetHandleViewPosition() {
